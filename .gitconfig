@@ -24,6 +24,13 @@
 	uncommit = reset HEAD^
 	purr = pull --rebase
 
+[user]
+	name = Hannes Ljungberg
+	email = hannes@5monkeys.se
+
+[github]
+	user = hannseman
+
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
