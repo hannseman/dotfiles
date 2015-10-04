@@ -25,6 +25,7 @@ export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:
 
 # Setup virtualenvwrapper
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.virtualenvwrapper
 if [ `id -u` != '0' ]; then
     if [ -f $VIRTUALENVWRAPPER_SCRIPT ]; then
         export WORKON_HOME=$HOME/.virtualenvs
