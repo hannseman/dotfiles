@@ -100,6 +100,7 @@ if has("autocmd")
   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
           \ formatoptions+=croq softtabstop=4 smartindent syntax=python
           \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
   let python_highlight_all=1
   let python_highlight_exceptions=0
   let python_highlight_builtins=0
