@@ -12,7 +12,6 @@ fi;
 prompt_git() {
 	local s='';
 	local branchName='';
-
 	# Check if the current directory is in a Git repository.
 	if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
 
@@ -60,15 +59,13 @@ prompt_git() {
 }
 
 function prompt_virtualenv(){
+		local venv='';
     # Get Virtual Env
     if [[ -n "$VIRTUAL_ENV" ]]; then
         # Strip out the path and just leave the env name
-        venv="${VIRTUAL_ENV##*/}"
-    else
-        # In case you don't have one activated
-        venv=''
+        venv="${VIRTUAL_ENV##*/}";
     fi
-    [[ -n "$venv" ]] && echo "(venv:$venv) "
+    [[ -n "$venv" ]] && echo "(venv:$venv) ";
 }
 
 # Disable the default virtualenv prompt change
@@ -118,19 +115,21 @@ else
 	hostStyle="${yellow}";
 fi;
 
-# Set the terminal title to the current working directory.
-PROMPT="\[\033]0;\w\007\]";
-PROMPT+="\[${red}\]$(prompt_virtualenv)";
-PROMPT+="\[${userStyle}\]\u"; # username
-PROMPT+="\[${white}\] at ";
-PROMPT+="\[${hostStyle}\]\h"; # host
-PROMPT+="\[${white}\] in ";
-PROMPT+="\[${green}\]\w"; # working directory
-PROMPT+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
-PROMPT+="\n";
-PROMPT+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
-export PROMPT;
-export PS1=$PROMPT;
+function bash_prompt(){
+	# Set the terminal title to the current working directory.
+	local prompt="\[\033]0;\w\007\]";
+	prompt+="\[${red}\]$(prompt_virtualenv)";
+	prompt+="\[${userStyle}\]\u"; # username
+	prompt+="\[${white}\] at ";
+	prompt+="\[${hostStyle}\]\h"; # host
+	prompt+="\[${white}\] in ";
+	prompt+="\[${green}\]\w"; # working directory
+	prompt+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
+	prompt+="\n";
+	prompt+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+	[[ -n "${prompt}" ]] && echo -e "${prompt}";
+}
+export PS1="$(bash_prompt)";
 
 PS2="\[${yellow}\]→ \[${reset}\]";
 export PS2;
