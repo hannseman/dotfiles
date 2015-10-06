@@ -39,6 +39,9 @@ export PYTHONDONTWRITEBYTECODE=1
 # Set java home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+# Set virtualbox install path
+export VBOX_INSTALL_PATH=/Applications/VirtualBox.app/Contents/MacOS
+
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
