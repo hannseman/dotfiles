@@ -68,6 +68,17 @@ function prompt_virtualenv(){
     [[ -n "$venv" ]] && echo "(venv:$venv) ";
 }
 
+function prompt_docker(){
+		local docker='';
+    # Get docker machine
+    if [[ -n "$DOCKER_MACHINE_NAME" ]]; then
+        # Strip out the path and just leave the env name
+        docker="${DOCKER_MACHINE_NAME}";
+    fi
+    [[ -n "$docker" ]] && echo "(docker:$docker) ";
+}
+
+
 # Disable the default virtualenv prompt change
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
@@ -129,6 +140,7 @@ fi;
 function bash_prompt(){
 	# Set the terminal title to the current working directory.
 	local prompt="\[\033]0;\w\007\]";
+	prompt+="\[${cyan}\]$(prompt_docker)";
 	prompt+="\[${cyan}\]$(prompt_virtualenv)";
 	prompt+="\[${userStyle}\]\u"; # username
 	prompt+="\[${white}\] at ";
