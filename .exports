@@ -51,7 +51,3 @@ export LANG="en_US"
 
 # Prevent shell exit with CTRL-d
 export IGNOREEOF=1
-
-# Setup docker machine
-eval "$(docker-machine env default)"
-
