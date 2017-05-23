@@ -52,6 +52,3 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias pycclean="find . -name '*.pyc' -delete"
 
 alias mach="source dockermachinewrapper.sh"
-
-# Git fork
-alias fork='function _fork(){ open $1 -a /Applications/Fork.app; };_fork'
