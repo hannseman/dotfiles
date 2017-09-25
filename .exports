@@ -27,6 +27,7 @@ export LESS='RSXin'
 export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:/usr/local/lib:$DYLD_FALLBACK_LIBRARY_PATH
 
 # Setup virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.virtualenvwrapper
 if [ `id -u` != '0' ]; then
