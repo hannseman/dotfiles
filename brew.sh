@@ -52,7 +52,6 @@ brew install ffmpeg --with-chromaprint --with-fdk-aac --with-libass --with-librs
 brew install ncdu
 brew install lice
 brew install yarn
-brew install java
 brew install mtr
 brew install htop
 brew install iftop
