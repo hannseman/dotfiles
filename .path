@@ -1,7 +1,2 @@
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/share/npm/bin:$PATH"
-export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
-export PATH="$HOME/.fastlane/bin:$PATH"
-export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+# Add `~/bin` to the `$PATH`
+export PATH="${HOME}/bin:${PATH}";

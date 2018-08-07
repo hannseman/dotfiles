@@ -1,59 +1,26 @@
+#!/usr/bin/env bash
+
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR="vim";
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
+export HISTSIZE="32768";
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+export HISTCONTROL="ignoreboth";
 
 # Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
-
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
-
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
+export MANPAGER="less -X";
 
 # Long lines chopped, ignore case on all lower case searches, no line number counting
-export LESS='RSXin'
-
-# Add postgres.app libraries on fallback path
-export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:/usr/local/lib:$DYLD_FALLBACK_LIBRARY_PATH
-
-# Setup virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.virtualenvwrapper
-if [ `id -u` != '0' ]; then
-    if [ -f $VIRTUALENVWRAPPER_SCRIPT ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source $VIRTUALENVWRAPPER_SCRIPT
-    fi
-fi
+export LESS="RSXin"
 
 # Prevent python from creating .pyc-files
 export PYTHONDONTWRITEBYTECODE=1
 
-# Set java home
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-# Set virtualbox install path
-export VBOX_INSTALL_PATH=/Applications/VirtualBox.app/Contents/MacOS
-
-# Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
-
 # Prevent shell exit with CTRL-d
 export IGNOREEOF=1
-
-# Set android home
-export ANDROID_NDK_HOME=/usr/local/share/android-ndk
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-export ANDROID_HOME=/usr/local/share/android-sdk

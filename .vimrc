@@ -1,81 +1,26 @@
-" Colors
-syntax enable           " enable syntax processing
-set background=dark
-let g:solarized_termtrans = 1
-colorscheme solarized
+syntax on                       " Syntax highlighting
+set number	                    " Show line numbers
+set linebreak	                " Break lines at word (requires Wrap lines)
+set showbreak=+++	            " Wrap-broken line prefix
+set textwidth=100	            " Line wrap (number of cols)
+set showmatch	                " Highlight matching brace
+set visualbell	                " Use visual bell (no beeping)
+                                "
+set hlsearch	                " Highlight all search results
+set smartcase	                " Enable smart-case search
+set ignorecase	                " Always case-insensitive
+set incsearch	                " Searches for strings incrementally
 
-" Misc
-set ttyfast                     " faster redraw
-set backspace=indent,eol,start
-set nocompatible
-set clipboard=unnamed
+set autoindent	                " Auto-indent new lines
+set expandtab	                " Use spaces instead of tabs
+set shiftwidth=4	            " Number of auto-indent spaces
+set smartindent	                " Enable smart-indent
+set smarttab	                " Enable smart-tabs
+set softtabstop=4	            " Number of spaces per Tab
+filetype indent on              " Activate indenting for files
 
-" Spaces & Tabs
-set tabstop=4           " 4 space tab
-set expandtab           " use spaces for tabs
-set softtabstop=4       " 4 space tab
-set shiftwidth=4
-set modelines=1
-filetype indent on
-filetype plugin on
-set autoindent
+set ruler	                    " Show row and column ruler information
 
-" UI Layout
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set nocursorline        " highlight current line
-set wildmenu
-set showmatch           " higlight matching parenthesis
-set cursorline          " highlight the current line
+set undolevels=1000	            " Number of undo levels
+set backspace=indent,eol,start	" Backspace behaviour
 
-" Searching
-set ignorecase          " ignore case when searching
-set smartcase           " be case sensitive when non lowercase
-set incsearch           " search as characters are entered
-set hlsearch            " highlight all matches
-
-" Line Shortcuts
-nnoremap j gj
-nnoremap k gk
-nnoremap B ^
-nnoremap E $
-
-" Misc shortcuts
-" Allow saving of files as sudo
-cmap w!! w !sudo tee > /dev/null %
-" Move between panes with ctrl+jkhl
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" MacVim
-set guioptions-=r
-set guioptions-=L
-
-" AutoGroups
-augroup configgroup
-    autocmd!
-    autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>StripTrailingWhitespaces()
-    autocmd BufEnter *.cls setlocal filetype=java
-    autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal tabstop=2
-    autocmd BufEnter *.sh setlocal shiftwidth=2
-    autocmd BufEnter *.sh setlocal softtabstop=2
-		autocmd BufEnter *.yaml setlocal tabstop=2
-    autocmd BufEnter *.yaml setlocal shiftwidth=2
-    autocmd BufEnter *.yaml setlocal softtabstop=2
-augroup END
-
-" Backups
-set backup
-set backupdir=~/.vim/backups
-set backupskip=/tmp/*,/private/tmp/*
-set writebackup
-
-" Swap & Undo
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
