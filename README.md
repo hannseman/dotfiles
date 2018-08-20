@@ -1,12 +1,12 @@
 # Dotfiles
 Based on https://github.com/mathiasbynens/dotfiles
 
-# Installation
+## Installation
 ```bash
 git clone https://github.com/hannseman/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
-#To customize:
+## To customize:
 
 Save env vars, etc in a .extra file, that looks something like this:
 
