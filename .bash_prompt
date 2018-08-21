@@ -67,13 +67,12 @@ if tput setaf 1 &> /dev/null; then
 	black=$(tput setaf 0);
 	blue=$(tput setaf 33);
 	cyan=$(tput setaf 37);
-	green=$(tput setaf 190);
-	orange=$(tput setaf 172);
-	purple=$(tput setaf 141);
+	green=$(tput setaf 64);
+	orange=$(tput setaf 166);
+	purple=$(tput setaf 125);
 	red=$(tput setaf 124);
 	violet=$(tput setaf 61);
-	magenta=$(tput setaf 9);
-	white=$(tput setaf 8);
+	white=$(tput setaf 15);
 	yellow=$(tput setaf 136);
 else
 	bold="";
@@ -85,7 +84,6 @@ else
 	orange="\e[1;33m";
 	purple="\e[1;35m";
 	red="\e[1;31m";
-	magenta="\e[1;31m";
 	violet="\e[1;35m";
 	white="\e[1;37m";
 	yellow="\e[1;33m";
@@ -93,9 +91,9 @@ fi;
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
-	userStyle="${orange}";
+	userStyle="${red}";
 else
-	userStyle="${magenta}";
+	userStyle="${orange}";
 fi;
 
 # Highlight the hostname when connected via SSH.
@@ -116,6 +114,3 @@ PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git r
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
-
-PS2="\[${yellow}\]→ \[${reset}\]";
-export PS2;
