@@ -47,7 +47,6 @@ fi;
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
-brew install openssh
 
 # Install other useful binaries.
 brew install ack
