@@ -4,7 +4,15 @@
 # Folder view configuration files
 .DS_Store
 Desktop.ini
+
+# PyCharm
 .idea/
+
+# Virtualenvs
+venv/
+
+# Node
+node_modules/
 
 # Thumbnail cache files
 ._*
