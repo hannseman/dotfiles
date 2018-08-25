@@ -73,5 +73,8 @@ brew install cocoapods
 brew install pipenv
 brew install yarn
 
+brew cask install qlstephen
+brew cask install fastlane
+
 # Remove outdated versions from the cellar.
 brew cleanup
