@@ -24,3 +24,6 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # Prevent shell exit with CTRL-d
 export IGNOREEOF=1
+
+# Enable CLICOLORS
+export CLICOLORS=1;
