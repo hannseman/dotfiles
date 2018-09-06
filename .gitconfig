@@ -35,6 +35,8 @@
 
 	uncommit = reset HEAD^
 
+	up = pull --rebase --autostash
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
