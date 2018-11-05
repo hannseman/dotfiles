@@ -27,3 +27,6 @@ export IGNOREEOF=1
 
 # Enable CLICOLORS
 export CLICOLORS=1;
+
+# Prevent pip from installing packages when not in a virtualenv
+PIP_REQUIRE_VIRTUALENV=1
