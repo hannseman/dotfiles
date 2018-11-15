@@ -22,16 +22,16 @@ export LC_ALL="en_US.UTF-8";
 export MANPAGER="less -X";
 
 # Long lines chopped, ignore case on all lower case searches, no line number counting
-export LESS="RSXin"
+export LESS="RSXin";
 
 # Prevent python from creating .pyc-files
-export PYTHONDONTWRITEBYTECODE=1
+export PYTHONDONTWRITEBYTECODE=1;
 
 # Prevent shell exit with CTRL-d
-export IGNOREEOF=1
+export IGNOREEOF=1;
 
 # Enable CLICOLORS
 export CLICOLORS=1;
 
 # Prevent pip from installing packages when not in a virtualenv
-PIP_REQUIRE_VIRTUALENV=1
+export PIP_REQUIRE_VIRTUALENV=1;
