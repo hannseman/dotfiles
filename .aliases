@@ -56,3 +56,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Remove pyc-files recursively
 alias pycclean="find . -name '*.pyc' -delete"
+
+# Install python system packages
+alias syspip="PIP_REQUIRE_VIRTUALENV=false pip"
