@@ -16,3 +16,6 @@ export PATH="${HOME}/.fastlane/bin:${PATH}"
 
 # Add android tools to path
 export PATH="${HOME}/Library/Android/sdk/platform-tools/:${PATH}"
+
+# Add postgres to path
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin/:${PATH}"
