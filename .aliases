@@ -59,3 +59,7 @@ alias pycclean="find . -name '*.pyc' -delete"
 
 # Install python system packages
 alias syspip="PIP_REQUIRE_VIRTUALENV=false pip"
+
+# Python virtualenv
+alias venv="test -d venv || (echo \"Creating virtual environment...\"; python3 -m venv venv) && printf \"Activating...\n\n\" && source venv/bin/activate"
+alias venv2="test -d venv || (echo \"Creating virtual environment...\"; python2 -m virtualenv venv) && printf \"Activating...\n\n\" && source venv/bin/activate"
