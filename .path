@@ -19,3 +19,6 @@ export PATH="${HOME}/Library/Android/sdk/platform-tools/:${PATH}"
 
 # Add postgres to path
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin/:${PATH}"
+
+# Add go bin to path
+export PATH="$(go env GOPATH)/bin:${PATH}";
