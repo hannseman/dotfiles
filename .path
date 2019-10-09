@@ -22,3 +22,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin/:${PATH}"
 
 # Add go bin to path
 export PATH="$(go env GOPATH)/bin:${PATH}";
+
+# Add homebrew ruby to path
+export PATH="/usr/local/opt/ruby/bin:${PATH}"
