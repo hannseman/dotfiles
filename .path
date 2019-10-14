@@ -25,3 +25,6 @@ export PATH="$(go env GOPATH)/bin:${PATH}";
 
 # Add homebrew ruby to path
 export PATH="/usr/local/opt/ruby/bin:${PATH}"
+
+# Add homebrew python to path
+export PATH="/usr/local/opt/python/libexec/bin:${PATH}"
