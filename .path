@@ -32,3 +32,6 @@ export PATH="/usr/local/opt/ruby/bin:${PATH}"
 
 # Add homebrew python to path
 export PATH="/usr/local/opt/python/libexec/bin:${PATH}"
+
+# Add pipx binaries to path
+export PATH="${HOME}/.local/bin/:${PATH}"
