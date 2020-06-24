@@ -28,7 +28,7 @@ brew install grep
 brew install gzip
 brew install screen
 brew install watch
-brew install wdiff --with-gettext
+brew install wdiff
 brew install wget
 
 # Install Bash 4.
