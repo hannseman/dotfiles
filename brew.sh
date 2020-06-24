@@ -52,9 +52,7 @@ brew install vim --with-override-system-vi
 brew install ack
 brew install curl
 brew install git
-brew install imagemagick --with-webp
 brew install tree
-brew install ffmpeg --with-chromaprint --with-fdk-aac --with-libass --with-librsvg --with-libsoxr --with-libssh --with-tesseract --with-libvidstab --with-opencore-amr --with-openh264 --with-openjpeg --with-openssl --with-rtmpdump --with-rubberband --with-sdl2 --with-snappy --with-tools --with-webp --with-x265 --with-xz --with-zeromq --with-zimg
 brew install ncdu
 brew install mtr
 brew install htop
@@ -70,7 +68,6 @@ brew install python@2
 brew install swiftlint
 brew install carthage
 brew install cocoapods
-brew install pipenv
 brew install yarn
 
 brew cask install qlstephen
