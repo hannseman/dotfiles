@@ -64,14 +64,12 @@ brew install pv
 
 brew install node
 brew install python
-brew install python@2
 brew install swiftlint
 brew install carthage
 brew install cocoapods
 brew install yarn
 
 brew cask install qlstephen
-brew cask install fastlane
 
 # Remove outdated versions from the cellar.
 brew cleanup
