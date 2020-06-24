@@ -46,7 +46,7 @@ fi;
 # Install GnuPG to enable PGP-signing commits.
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 
 # Install other useful binaries.
 brew install ack
