@@ -42,9 +42,6 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/bash;
 fi;
-
-# Install GnuPG to enable PGP-signing commits.
-
 # Install more recent versions of some macOS tools.
 brew install vim
 
@@ -68,6 +65,7 @@ brew install swiftlint
 brew install carthage
 brew install cocoapods
 brew install yarn
+brew install go
 
 brew cask install qlstephen
 
