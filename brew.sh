@@ -66,6 +66,7 @@ brew install carthage
 brew install cocoapods
 brew install yarn
 brew install go
+brew install pipx
 
 brew cask install qlstephen
 
